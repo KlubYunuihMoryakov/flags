@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 100%;
+    padding: 10px; /* Уменьшен отступ */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 22px; /* Уменьшен размер */
+    margin-bottom: 5px; /* Уменьшен отступ снизу */
+}
+
+p {
+    font-size: 16px; /* Уменьшен размер */
+    margin: 5px 0; /* Уменьшены отступы */
+}
+
+#semaphoreImage {
+    max-width: 80%;
+    height: auto;
+    margin: 10px 0; /* Уменьшен отступ сверху и снизу */
+}
+
+.result {
+    font-size: 16px; /* Уменьшен размер шрифта */
+    margin-top: 10px; /* Уменьшен отступ сверху */
+    color: transparent; /* Изначально скрыт */
+    min-height: 20px; /* Резервируем место под текст */
+    display: inline-block; /* Обеспечиваем, что элемент занимает место */
+}
+
+.letters {
+    display: flex;
+    flex-wrap: wrap; /* Кнопки переносятся на следующую строку, если не помещаются */
+    justify-content: center;
+    gap: 10px; /* Расстояние между кнопками */
+    margin-top: 10px; /* Уменьшен отступ сверху */
+}
+
+.letters button {
+    padding: 12px 16px; /* Основной размер кнопок для десктопов */
+    font-size: 16px; /* Размер текста */
+    cursor: pointer;
+    border: none;
+    background-color: #f4f4f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Эффект нажатия на кнопку */
+.letters button:active {
+    background-color: #ccc;
+    transform: scale(0.95);
+}
+
+/* Убираем серость при фокусе */
+.letters button:focus {
+    outline: none;
+}
+
+/* Эффект наведения */
+.letters button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05); /* Уменьшен эффект увеличения */
+}
+
+/* Мобильная версия (адаптивность) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 18px; /* Уменьшен размер */
+    }
+
+    p {
+        font-size: 14px; /* Уменьшен размер */
+    }
+
+    .letters button {
+        padding: 8px 12px; /* Большие кнопки для телефонов */
+        font-size: 12px; /* Увеличенный текст */
+    }
+
+    #semaphoreImage {
+        max-width: 90%; /* Шире изображение для мобильных */
+    }
+}
